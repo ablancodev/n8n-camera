@@ -1,0 +1,36 @@
+/* Spotlight: atenúa todo lo que no está enfocado */
+.n8n-camera-dim .vue-flow__node {
+  opacity: 0.2;
+  transition: opacity 0.5s ease;
+}
+
+.n8n-camera-dim .vue-flow__node.n8n-camera-focus {
+  opacity: 1;
+}
+
+.n8n-camera-dim .vue-flow__edge {
+  opacity: 0.15;
+  transition: opacity 0.5s ease;
+}
+
+.n8n-camera-hud {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: rgba(20, 20, 25, 0.85);
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  z-index: 2147483647;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.n8n-camera-hud.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

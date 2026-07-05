@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "n8n Camera",
+  "version": "0.2.0",
+  "description": "Cámara virtual para n8n: enfoca y amplía nodos del workflow con atajos de teclado, ideal para grabar vídeos sin edición.",
+  "author": "Antonio Blanco Oliva (ablancodev)",
+  "homepage_url": "https://ablancodev.com",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "n8n Camera — estado"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

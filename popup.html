@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      width: 260px;
+      margin: 0;
+      padding: 14px;
+      background: #1a1a20;
+      color: #eee;
+    }
+    h1 { font-size: 14px; margin: 0 0 10px; }
+    .hint { color: #999; margin: 0 0 8px; }
+    .status { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: #888; }
+    .dot.ok { background: #4caf50; }
+    .dot.ko { background: #e05252; }
+    table { width: 100%; border-collapse: collapse; }
+    td { padding: 3px 0; color: #bbb; }
+    td:first-child { color: #eee; font-family: monospace; white-space: nowrap; padding-right: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🎥 n8n Camera</h1>
+  <div class="status">
+    <span class="dot" id="dot"></span>
+    <span id="statusText">Comprobando…</span>
+  </div>
+  <p class="hint">En Mac, la tecla <b>Alt</b> es <b>⌥ Option</b>.</p>
+  <table>
+    <tr><td>Alt + →/←</td><td>siguiente / anterior nodo</td></tr>
+    <tr><td>Alt + ↑/↓</td><td>más / menos zoom</td></tr>
+    <tr><td>Alt + 0</td><td>vista general</td></tr>
+    <tr><td>Alt + C</td><td>enfocar conexión X → Y</td></tr>
+    <tr><td>Alt + S</td><td>spotlight on/off</td></tr>
+    <tr><td>Alt + F</td><td>seguir ejecución on/off</td></tr>
+    <tr><td>Alt + H</td><td>mostrar/ocultar HUD</td></tr>
+  </table>
+  <script src="popup.js"></script>
+</body>
+</html>
